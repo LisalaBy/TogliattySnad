@@ -1,0 +1,459 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header Styles */
+.header {
+  background-color: #3762CC;
+  color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-size: 20px;
+  font-style: bold;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 169px;
+  
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #d3d3d3;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 20px;
+}
+.navigation a:hover {
+  color: white;
+  opacity: 0.7;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 20px;
+}
+.navigation:not(:last-child)::after {
+  content: ""; /* Обязательно для псевдоэлемента */
+  position: absolute;
+  top: 50%; /* Центрируем по вертикали */
+  right: 0;
+  transform: translateY(-50%); /* Корректируем центрирование */
+  width: 1px;  /* Толщина палочки */
+  height: 44px; /* Высота палочки (как запрошено) */
+  background-color: #ccc; /* Цвет палочки (можно изменить) */
+}
+
+.phone {
+  text-decoration: none;
+  color: white;
+}
+
+.separator {
+  margin: 0 15px;
+}
+
+
+/* Landing Section Styles */
+.landing-section {
+  
+  background-image: url("image/блок.jpg"); /* Замените на ваш путь */
+  background-size: cover; /* Покрывает все пространство, обрезая изображение */
+  background-repeat: no-repeat; /* Не повторяет изображение */
+  color: white;
+  padding: 158px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 844px;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-content {
+  max-width: 1147px;
+  max-height: 428px;
+  padding-left: 233px;
+}
+
+.landing-content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  font-size: 70px;
+}
+
+.landing-content p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 60px;
+  font-size: 30px;
+}
+
+
+.button {
+  /* Размеры и базовая стилизация */
+  width: 324px; /* Как указано на изображении */
+  height: 70px; /* Как указано на изображении */
+  background-color:  #3762CC; /* Цвет Royal Blue (вы можете изменить) */
+  color: white;
+  font-size: 25px; /* Подберите подходящий размер */
+  font-weight: bold;
+  border: 2px solid white;
+  cursor: pointer;
+text-decoration: none;
+  /* Закругление углов (делает кнопку овальной) */
+  border-radius: 40px; /* Очень большое значение для максимального закругления */
+
+  /* Центрирование текста */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Убираем стандартные стили кнопки */
+  padding: 0;
+  outline: none; /* Убираем обводку при фокусе */
+  box-sizing: border-box; /* Учитываем padding и border в общей ширине и высоте */
+}
+
+.button:hover {
+  color:  #3762CC;
+  background-color: #ffffff; /* Более темный оттенок при наведении */
+}
+
+.button:active {
+  background-color: #2E40B3; /* Еще более темный оттенок при нажатии */
+  
+}
+
+
+
+
+
+/* About Us Section */
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.about-us__title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #3762CC;
+}
+
+.about-us__item {
+  display: flex;
+  align-items: center; /* Выравнивание по вертикали по центру */
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+.about-us__circle {
+  width: 50px;  /* Увеличенный размер */
+  height: 50px; /* Увеличенный размер */
+  border-radius: 50%;
+  background-color: #3762CC; 
+  color: #ffffff;
+  opacity: 0.8;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 21px;
+  flex-shrink: 0;
+  
+}
+
+.about-us__text {
+  font-size: 35px;
+  line-height: 1.5;
+}
+
+
+
+
+/* Products Section */
+.products {
+  padding: 50px;
+  text-align: center;
+}
+
+.products h1 {
+  color: #3762CC;
+  font-size: 48px;
+  margin-bottom: 25px;
+}
+
+.products h2 {
+  color: #000000;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: flex-start; /* Start cards from the left */
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 20px;
+  position: relative;
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.card-container::before,
+.card-container::after {
+    content: '';
+    display: block;
+    width: 50px;
+    flex-shrink: 0;
+}
+
+.card {
+  width: 421px;
+  height: 564px;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  margin: 0 48.5px; /* New margin for 97px spacing */
+  flex-shrink: 0;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card__image1 {
+  width: 100%;
+  height: 50%;
+  background-image: url("image/card1.jpg");
+}
+.card__image2 {
+  width: 100%;
+  height: 50%;
+  background-image: url("image/card2.jpg");
+}
+.card__image3 {
+  width: 100%;
+  height: 50%;
+  background-image: url("image/card3.jpg");
+}
+
+.card__content {
+  padding: 20px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card__title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  flex-grow: 1;
+}
+
+.card__button {
+  background-color: #3762CC;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  width: 80%;
+  max-width: 260px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card__button:hover {
+  background-color: #022b92; 
+}
+
+/* Arrow Styles */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  background-color: #3762CC;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1;
+  flex-shrink: 0;
+  margin-right: 72px;
+}
+
+.nav-arrow:hover {
+  background-color: #022b92;
+}
+
+
+/* Contact Form Section */
+
+
+
+.contact-form {
+  width: 619px; /* Ширина формы */
+  height: 628px;
+  border: 3px solid #3762CC; /* Обводка */
+  margin-top: 146px;
+  border-radius: 40px; /* Закругление углов */
+  padding: 20px; /* Отступы внутри формы */
+  margin-left: 204px; /* Отступ от левого края */
+  box-sizing: border-box; /* Учитывать обводку и отступы в ширине */
+}
+
+.contact-form div {
+  margin-bottom: 15px; /* Отступ между полями */
+}
+
+.contact-form label {
+  display: block; /* Метка над полем */
+  margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #3762CC;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.button-wrapper {
+  text-align: center;
+  margin-top: 72px;
+}
+
+.button-wrapper button {
+  background-color: #3762CC;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  height: 52px;
+}
+
+.button-wrapper button:hover {
+  background-color: #283593;
+}
+
+
+
+/* Footer Styles */
+.footer {
+  background-color: #3762CC;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.logo-footer{
+  margin-top: 57px;
+}
+
+.footer-section {
+  margin-bottom: 20px;
+}
+
+.footer-section h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* Font Awesome */
+
+.slider-button {
+  background: rgba(255,255,255,0.5);
+  border: none;
+  border-radius: 50%;
+  color: #3762CC;
+  cursor: pointer;
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 10px;
+  opacity: 0.8;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  transition: background-color 0.3s, opacity 0.3s;
+
+}
+
+.slider-button:hover {
+  background-color: rgba(255,255,255,0.9);
+  opacity: 1;
+}
+
+.slider-prev {
+  left: 10px;
+}
+
+.slider-next {
+  right: 10px;
+}
+
+
+
+
+

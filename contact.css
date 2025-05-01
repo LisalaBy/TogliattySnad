@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Header Styles */
+  .header {
+    background-color: #3762CC;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-size: 20px;
+    font-style: bold;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-right: 169px;
+    
+  }
+  
+  .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: #d3d3d3;
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navigation a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 20px;
+  }
+  .navigation a:hover {
+    color: white;
+    opacity: 0.7;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 20px;
+  }
+  .navigation:not(:last-child)::after {
+    content: ""; /* Обязательно для псевдоэлемента */
+    position: absolute;
+    top: 50%; /* Центрируем по вертикали */
+    right: 0;
+    transform: translateY(-50%); /* Корректируем центрирование */
+    width: 1px;  /* Толщина палочки */
+    height: 44px; /* Высота палочки (как запрошено) */
+    background-color: #ccc; /* Цвет палочки (можно изменить) */
+  }
+  
+  .phone {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .separator {
+    margin: 0 15px;
+  }
+  
+
+/*  Contact*/
+.contacts {
+    width: 1705px;
+    height: 788px;
+    font-family: sans-serif;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  .contacts h2{
+    font-size: 48px;
+    color: #3762CC;
+  }
+  
+  .contact-details {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+  
+  .contact-details ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-details li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-details i {
+    margin-right: 10px;
+    color: #3762CC;
+  }
+  
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+  
+  
+
+
+
+  
+
+  /* Footer Styles */
+.footer {
+    background-color: #3762CC;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .logo-footer{
+    margin-top: 57px;
+  }
+  
+  .footer-section {
+    margin-bottom: 20px;
+  }
+  
+  .footer-section h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  /* Font Awesome */
+  
+  .slider-button {
+    background: rgba(255,255,255,0.5);
+    border: none;
+    border-radius: 50%;
+    color: #3762CC;
+    cursor: pointer;
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 10px;
+    opacity: 0.8;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    transition: background-color 0.3s, opacity 0.3s;
+  
+  }
+  
+  .slider-button:hover {
+    background-color: rgba(255,255,255,0.9);
+    opacity: 1;
+  }
+  
+  .slider-prev {
+    left: 10px;
+  }
+  
+  .slider-next {
+    right: 10px;
+  }
+  
+  
+  
+  
